@@ -55,25 +55,25 @@
   <text x="1070" y="361" class="b">• Trust / identity</text>
   <text x="1070" y="388" class="b">• Human approval</text>
 
-  <rect x="1020" y="520" width="120" height="92" rx="16" fill="#143624" stroke="#2aa96b" filter="url(#shadow)"/>
-  <text x="1053" y="560" class="h">ALLOW</text>
-  <text x="1044" y="586" class="small">Execute</text>
+   <rect x="970" y="520" width="120" height="92" rx="16" fill="#143624" stroke="#2aa96b" filter="url(#shadow)"/>
+  <text x="1003" y="560" class="h">ALLOW</text>
+  <text x="994" y="586" class="small">Execute</text>
 
-  <rect x="1160" y="520" width="120" height="92" rx="16" fill="#403315" stroke="#f0b54b" filter="url(#shadow)"/>
-  <text x="1190" y="560" class="h">REVIEW</text>
-  <text x="1179" y="586" class="small">Human check</text>
+  <rect x="1110" y="520" width="120" height="92" rx="16" fill="#403315" stroke="#f0b54b" filter="url(#shadow)"/>
+  <text x="1140" y="560" class="h">REVIEW</text>
+  <text x="1129" y="586" class="small">Human check</text>
 
-  <rect x="1300" y="520" width="120" height="92" rx="16" fill="#441a1f" stroke="#f05a6b" filter="url(#shadow)"/>
-  <text x="1336" y="560" class="h">BLOCK</text>
-  <text x="1322" y="586" class="small">Do not execute</text>
+  <rect x="1250" y="520" width="120" height="92" rx="16" fill="#441a1f" stroke="#f05a6b" filter="url(#shadow)"/>
+  <text x="1286" y="560" class="h">BLOCK</text>
+  <text x="1272" y="586" class="small">Do not execute</text>
 
   <line x1="311" y1="215" x2="390" y2="275" stroke="#8ea3c6" stroke-width="4" marker-end="url(#arrow)"/>
   <line x1="311" y1="410" x2="390" y2="325" stroke="#8ea3c6" stroke-width="4" marker-end="url(#arrow)"/>
   <line x1="661" y1="300" x2="740" y2="300" stroke="#8ea3c6" stroke-width="4" marker-end="url(#arrow)"/>
   <line x1="1001" y1="300" x2="1040" y2="300" stroke="#8ea3c6" stroke-width="4" marker-end="url(#arrow)"/>
-  <line x1="1190" y1="451" x2="1080" y2="520" stroke="#6bd49a" stroke-width="4" marker-end="url(#arrow)"/>
-  <line x1="1190" y1="451" x2="1220" y2="520" stroke="#f0b54b" stroke-width="4" marker-end="url(#arrow)"/>
-  <line x1="1190" y1="451" x2="1360" y2="520" stroke="#f05a6b" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1190" y1="451" x2="1030" y2="520" stroke="#6bd49a" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1190" y1="451" x2="1170" y2="520" stroke="#f0b54b" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1190" y1="451" x2="1310" y2="520" stroke="#f05a6b" stroke-width="4" marker-end="url(#arrow)"/>
 
   <rect x="60" y="620" width="1280" height="120" rx="18" fill="#0d1626" stroke="#2b3c58"/>
   <text x="92" y="664" class="h">Design principle</text>
