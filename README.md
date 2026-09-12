@@ -8,9 +8,11 @@ PraxisLock is a runtime security layer for tool-using AI agents. It correlates *
 
 ## Demo
 
-[![PraxisLock Demo](assets/PraxisLock_Demo_Preview.png)](assets/PraxisLock_Demo.mp4)
+![PraxisLock Demo](assets/PraxisLock_Demo.gif)
 
-**▶ Click the image to watch the short PraxisLock demo.**
+▶ **The demo above shows the full attack flow: user goal → poisoned content → unauthorized tool action → BLOCK.**
+
+[Watch/download the MP4 version](https://raw.githubusercontent.com/praxislock/praxislock-showcase/main/assets/PraxisLock_Demo.mp4)
 
 ![PraxisLock Architecture](assets/praxislock-architecture.svg)
 
