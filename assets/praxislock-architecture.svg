@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-label="PraxisLock architecture diagram">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#121a2b"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8ea3c6"/>
+    </marker>
+    <style>
+      .title { font: 700 34px Inter, Arial, sans-serif; fill: #ffffff; }
+      .sub { font: 400 17px Inter, Arial, sans-serif; fill: #c8d3e6; }
+      .h { font: 700 19px Inter, Arial, sans-serif; fill: #ffffff; }
+      .b { font: 400 15px Inter, Arial, sans-serif; fill: #d9e2f1; }
+      .small { font: 400 13px Inter, Arial, sans-serif; fill: #a8b5ca; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="820" rx="28" fill="url(#bg)"/>
+  <text x="60" y="72" class="title">PraxisLock Runtime Architecture</text>
+  <text x="60" y="102" class="sub">The AI agent can propose actions. PraxisLock decides whether those actions are allowed.</text>
+
+  <rect x="60" y="160" width="250" height="110" rx="18" fill="#1b2740" stroke="#3b4b6f" filter="url(#shadow)"/>
+  <text x="88" y="200" class="h">1. User Goal</text>
+  <text x="88" y="228" class="b">Authorized task</text>
+  <text x="88" y="249" class="small">Example: “Summarize the Q3 report.”</text>
+
+  <rect x="60" y="320" width="250" height="180" rx="18" fill="#2a1d2d" stroke="#71406f" filter="url(#shadow)"/>
+  <text x="88" y="360" class="h">2. Untrusted Content</text>
+  <text x="88" y="388" class="b">PDFs · Web · Email</text>
+  <text x="88" y="410" class="b">DB rows · Tool output</text>
+  <text x="88" y="445" class="small">Potential source of indirect</text>
+  <text x="88" y="465" class="small">prompt injection or hidden instructions</text>
+
+  <rect x="390" y="235" width="270" height="130" rx="18" fill="#1f3147" stroke="#4e79a7" filter="url(#shadow)"/>
+  <text x="420" y="278" class="h">3. AI Agent</text>
+  <text x="420" y="306" class="b">Consumes content</text>
+  <text x="420" y="327" class="b">Plans next action</text>
+
+  <rect x="740" y="235" width="260" height="130" rx="18" fill="#243348" stroke="#5c88c6" filter="url(#shadow)"/>
+  <text x="770" y="278" class="h">4. Proposed Tool Action</text>
+  <text x="770" y="306" class="b">send_email(...)</text>
+  <text x="770" y="327" class="b">upload_file(...)</text>
+
+  <rect x="1040" y="150" width="300" height="300" rx="22" fill="#16253b" stroke="#56759d" filter="url(#shadow)"/>
+  <text x="1070" y="192" class="h">5. PraxisLock Runtime</text>
+  <text x="1070" y="226" class="b">• Provenance / taint</text>
+  <text x="1070" y="253" class="b">• Intent alignment</text>
+  <text x="1070" y="280" class="b">• Destination policy</text>
+  <text x="1070" y="307" class="b">• DLP</text>
+  <text x="1070" y="334" class="b">• Tool authority</text>
+  <text x="1070" y="361" class="b">• Trust / identity</text>
+  <text x="1070" y="388" class="b">• Human approval</text>
+
+  <rect x="1020" y="520" width="120" height="92" rx="16" fill="#143624" stroke="#2aa96b" filter="url(#shadow)"/>
+  <text x="1053" y="560" class="h">ALLOW</text>
+  <text x="1044" y="586" class="small">Execute</text>
+
+  <rect x="1160" y="520" width="120" height="92" rx="16" fill="#403315" stroke="#f0b54b" filter="url(#shadow)"/>
+  <text x="1190" y="560" class="h">REVIEW</text>
+  <text x="1179" y="586" class="small">Human check</text>
+
+  <rect x="1300" y="520" width="120" height="92" rx="16" fill="#441a1f" stroke="#f05a6b" filter="url(#shadow)"/>
+  <text x="1336" y="560" class="h">BLOCK</text>
+  <text x="1322" y="586" class="small">Do not execute</text>
+
+  <line x1="311" y1="215" x2="390" y2="275" stroke="#8ea3c6" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="311" y1="410" x2="390" y2="325" stroke="#8ea3c6" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="661" y1="300" x2="740" y2="300" stroke="#8ea3c6" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1001" y1="300" x2="1040" y2="300" stroke="#8ea3c6" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1190" y1="451" x2="1080" y2="520" stroke="#6bd49a" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1190" y1="451" x2="1220" y2="520" stroke="#f0b54b" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1190" y1="451" x2="1360" y2="520" stroke="#f05a6b" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="60" y="620" width="1280" height="120" rx="18" fill="#0d1626" stroke="#2b3c58"/>
+  <text x="92" y="664" class="h">Design principle</text>
+  <text x="92" y="694" class="b">The model can recommend an action, but PraxisLock independently decides whether the action is permitted.</text>
+  <text x="92" y="719" class="b">That makes security depend on runtime policy enforcement — not only on whether the model “resisted” bad instructions.</text>
+</svg>

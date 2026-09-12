@@ -2,6 +2,8 @@
 
 This document describes the **public architecture model** of PraxisLock without exposing implementation source code.
 
+![PraxisLock Architecture](../assets/praxislock-architecture.svg)
+
 ## Security objective
 
 PraxisLock is designed to enforce a separation between:
@@ -16,20 +18,14 @@ The AI model may propose an action, but the independent runtime policy layer dec
 
 ## High-level flow
 
-```mermaid
-flowchart LR
-    R[User Request] --> AG[Agent]
-    C[Documents / Web / Email / DB / Tool Output] --> AG
-    AG --> PA[Proposed Action]
-    PA --> PR[PraxisLock Runtime]
-    PR --> AL[ALLOW]
-    PR --> RV[REVIEW]
-    PR --> BL[BLOCK]
-    AL --> TOOL[Tool Execution]
-    RV --> HUMAN[Human Approval]
-    HUMAN -->|Approved exact action| TOOL
-    HUMAN -->|Rejected| BL
-```
+- User submits a legitimate task.
+- Agent consumes one or more sources, including potentially untrusted content.
+- Agent proposes a tool action.
+- PraxisLock independently evaluates that action.
+- PraxisLock returns one of three outcomes:
+  - **ALLOW**
+  - **REVIEW**
+  - **BLOCK**
 
 ## Major control planes
 
