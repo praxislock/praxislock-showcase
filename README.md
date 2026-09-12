@@ -6,6 +6,8 @@ PraxisLock is a runtime security layer for tool-using AI agents. It correlates *
 
 > **Core idea:** keep AI-agent actions bound to authorized user intent.
 
+## Demo
+
 ![PraxisLock Architecture](assets/praxislock-architecture.svg)
 
 ## Why this exists
